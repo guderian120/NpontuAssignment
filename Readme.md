@@ -111,7 +111,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Scalability**: Easily modify or replicate the setup.
 - **Automation**: Reduces manual AWS Console usage.
 
-*Image*: Terraform output (`images/terraform-provisioning.png`).
+*Image*: Terraform output (`media/terraform_plan_output.png`).
 
 ### 3.2 Server Configuration
 **Purpose**: Set up essential services and security on the EC2 instance.
@@ -129,7 +129,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Nginx**: Secures and routes traffic.
 - **Security**: Protects against unauthorized access and attacks.
 
-*Image*: Docker containers (`images/docker-containers.png`).
+*Image*: Docker containers (`media/docker_containers.png`).
 
 ### 3.3 SSL Configuration
 **Purpose**: Secure GitLab and the web app with HTTPS.
@@ -156,7 +156,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Certbot**: Automates certificate management.
 - **GitLab**: Requires correct URL for HTTPS access.
 
-*Image*: Certbot setup (`images/ssl-certbot.png`).
+*Image*: Certbot setup (`media/ssl-certbot.png`).
 
 ### 3.4 GitLab Project Setup
 **Purpose**: Create a repository for code and CI/CD configuration.
@@ -180,7 +180,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Collaboration**: Enables team contributions.
 - **SSH**: Secures pipeline authentication.
 
-*Image*: Project creation (`images/gitlab-project.png`).
+*Image*: Project creation (`media/gitlab-project.png`).
 
 ### 3.5 GitLab Runner Setup
 **Purpose**: Enable CI/CD job execution with a Docker-based runner.
@@ -223,7 +223,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Docker**: Ensures job isolation.
 - **Optimization**: Prevents resource overuse.
 
-*Image*: Runner setup (`images/gitlab-runner.png`).
+*Image*: Runner setup (`media/gitlab-runner.png`).
 
 ### 3.6 Server-Side Git Setup
 **Purpose**: Enable `git pull` for deployment on the EC2 instance.
@@ -253,7 +253,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **SSH**: Secures repository access.
 - **Automation**: Enables CI/CD to update code.
 
-*Image*: Git setup (`images/git-setup.png`).
+*Image*: Git setup (`media/git-setup.png`).
 
 ### 3.7 Server-Side Sudo Permissions
 **Purpose**: Allow passwordless `sudo` for deployment commands.
@@ -272,7 +272,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Passwordless**: Prevents CI/CD prompts.
 - **Security**: Limits commands to specific binaries.
 
-*Image*: Sudoers (`images/sudoers-config.png`).
+*Image*: Sudoers (`media/sudoers-config.png`).
 
 ### 3.8 Developer Instructions
 **Purpose**: Guide developers to contribute to the project.
@@ -307,22 +307,22 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Git Pull**: Simplifies code updates.
 - **Nginx**: Ensures reliable app access.
 
-*Image*: Pipeline (`images/pipeline-execution.png`).
+*Image*: Pipeline (`media/pipeline-execution.png`).
 
 ## 4. Screenshots
 **Purpose**: Visually document the setup process.
 
 | Step | Image Path |
 |------|------------|
-| Terraform Provisioning | `images/terraform-provisioning.png` |
-| Docker Containers | `images/docker-containers.png` |
-| SSL Configuration | `images/ssl-certbot.png` |
-| GitLab Project | `images/gitlab-project.png` |
-| GitLab Runner | `images/gitlab-runner.png` |
-| Server-Side Git | `images/git-setup.png` |
-| Sudo Permissions | `images/sudoers-config.png` |
-| Pipeline Execution | `images/pipeline-execution.png` |
-| Web App | `images/web-app.png` |
+| Terraform Provisioning | `media/terraform_plan_output.gif` |
+| Docker Containers | `media/docker_containers.png` |
+| SSL Configuration | `media/ssl-certbot.png` |
+| GitLab Project | `media/gitlab-project.png` |
+| GitLab Runner | `media/gitlab-runner.png` |
+| Server-Side Git | `media/git-setup.png` |
+| Sudo Permissions | `media/sudoers-config.png` |
+| Pipeline Execution | `media/pipeline-execution.png` |
+| Web App | `media/web-app.png` |
 
 **Why**: Images enhance understanding and provide proof of completion.
 
@@ -427,15 +427,15 @@ The pipeline consists of three stages, each running in isolated Docker container
 ## 8. Verification
 **Purpose**: Confirm the setup is functional.
 
-- GitLab: `https://<instance-public-ip>.nip.io`.
-- Web app: `https://<instance-public-ip>.nip.io/app`.
+- GitLab: `https://63.34.9.231.nip.io/`.
+- Web app: `http://63.34.9.231/app`.
 - Logs: GitLab (CI/CD > Pipelines).
 - Files: `ssh -i <key>.pem ubuntu@<instance-public-ip>`, check `/var/www/html`.
 - PostgreSQL: `docker exec -it postgres psql -U devsecops -d app_db`.
 - Memory: `free -h` (~8GB).
 - EBS: `lsblk` (16GB).
 
-*Image*: Web app (`images/web-app.png`).
+*Image*: Web app (`media/web-app.png`).
 
 **Why**: Validates successful deployment.
 
