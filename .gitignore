@@ -1,0 +1,6 @@
+terraform_configuration/.terraform/*
+terraform_configuration/.terraform
+terraform_configuration/.terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
