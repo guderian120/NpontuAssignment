@@ -186,13 +186,13 @@
   **Purpose**: Enable CI/CD job execution with a Docker-based runner.
 
   **Steps**:
-  1. Install:
+  1. Install
     ```bash
     curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
     sudo apt-get update
     sudo apt-get install -y gitlab-runner
     ```
-  2. Register:
+  2. Register
     ```bash
     sudo gitlab-runner register
     ```
@@ -202,11 +202,11 @@
     - Tags: None
     - Executor: `docker`
     - Image: `docker:20.10.16`
-  3. Configure:
+  3. Configure
     ```bash
     sudo usermod -aG docker gitlab-runner
     sudo nano /etc/gitlab-runner/config.toml
-    # Set:
+    # Set
     concurrent = 1
     [[runners]]
       name = "ec2-runner"
