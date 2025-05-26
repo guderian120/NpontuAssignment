@@ -434,6 +434,6 @@
   - Memory: `free -h` (~8GB).
   - EBS: `lsblk` (16GB).
 
-  *Image*: ![Web app](`media/app_image.png`).
+  *Image*: ![Web app](media/app_image.png).
 
   **Why**: Validates successful deployment.
