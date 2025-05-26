@@ -112,7 +112,7 @@
   - **Scalability**: Easily modify or replicate the setup.
   - **Automation**: Reduces manual AWS Console usage.
 
-  *Image*: ![Terraform output](media/terraform_plan_output.png).
+  *Image*: ![Terraform output](media/terraform_plan_output.gif).
 
   ### 3.2 Server Configuration
   **Purpose**: Set up essential services and security on the EC2 instance.
@@ -157,7 +157,6 @@
   - **Certbot**: Automates certificate management.
   - **GitLab**: Requires correct URL for HTTPS access.
 
-  *Image*: Certbot setup (`media/ssl-certbot.png`).
 
   ### 3.4 GitLab Project Setup
   **Purpose**: Create a repository for code and CI/CD configuration.
@@ -181,7 +180,7 @@
   - **Collaboration**: Enables team contributions.
   - **SSH**: Secures pipeline authentication.
 
-  *Image*: ![Project creation] (`media/gitlab-project.png`).
+  *Image*: ![Project creation](media/gitlab_repo_image.png).
 
   ### 3.5 GitLab Runner Setup
   **Purpose**: Enable CI/CD job execution with a Docker-based runner.
@@ -224,7 +223,7 @@
   - **Docker**: Ensures job isolation.
   - **Optimization**: Prevents resource overuse.
 
-  *Image*: Runner setup (`media/gitlab-runner.png`).
+  *Image*: ![Runner setup](media/runner_status.png).
 
   ### 3.6 Server-Side Git Setup
   **Purpose**: Enable `git pull` for deployment on the EC2 instance.
@@ -254,7 +253,7 @@
   - **SSH**: Secures repository access.
   - **Automation**: Enables CI/CD to update code.
 
-  *Image*: Git setup (`media/git-setup.png`).
+  *Image*: Git setup (`media/cloning_from_repo.png`).
 
   ### 3.7 Server-Side Sudo Permissions
   **Purpose**: Allow passwordless `sudo` for deployment commands.
@@ -273,7 +272,6 @@
   - **Passwordless**: Prevents CI/CD prompts.
   - **Security**: Limits commands to specific binaries.
 
-  *Image*: Sudoers (`media/sudoers-config.png`).
 
   ### 3.8 Developer Instructions
   **Purpose**: Guide developers to contribute to the project.
@@ -308,7 +306,7 @@
   - **Git Pull**: Simplifies code updates.
   - **Nginx**: Ensures reliable app access.
 
-  *Image*: Pipeline (`media/pipeline-execution.png`).
+  *Image*: ![Pipeline](media/pipeline_flow.png).
 
   ## 4. Screenshots
   **Purpose**: Visually document the setup process.
