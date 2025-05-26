@@ -16,9 +16,9 @@ This project establishes a modern **DevSecOps environment** on an AWS EC2 instan
 ### Getting Started
 To set up this environment:
 1. **Prepare Prerequisites**: AWS account, Terraform, AWS CLI, EC2 key pair, and your public IP.
-2. **Clone Repository**: `git clone <repo-url>`.
+2. **Clone Repository**: `git clone   --recurse-submodules  https://github.com/guderian120/NpontuAssignment`.
 3. **Follow Setup Instructions**: Use the steps below to provision infrastructure, configure services, and deploy the application.
-4. **Access the Environment**: Use GitLab (`https://<instance-public-ip>.nip.io`) and the web app (`https://<instance-public-ip>.nip.io/app`).
+4. **Access the Environment**: Use GitLab (`https://63.34.9.231.nip.io/root/web-app`) and the web app (`http://63.34.9.231/app`).
 5. **Troubleshoot**: Refer to the troubleshooting section for common issues and solutions.
 
 This guide is designed for beginners, with each step explained to provide clarity and context. Images are included to illustrate key processes, and a table of contents ensures easy navigation.
@@ -93,7 +93,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 **Purpose**: Automate EC2 instance creation for reproducibility and scalability.
 
 **Steps**:
-1. Clone the repository: `git clone <repo-url>`.
+1. Clone the repository: `git clone --recurse-submodules https://github.com/guderian120/NpontuAssignment?`.
 2. Update `variables.tf` with:
    - AMI ID (Ubuntu 22.04).
    - Key pair name (`my-key-pair`).
@@ -280,9 +280,9 @@ The pipeline consists of three stages, each running in isolated Docker container
 **Steps**:
 1. Clone:
    ```bash
-   git clone https://<instance-public-ip>.nip.io/root/web-app.git
-   # or
-   git clone git@<instance-public-ip>:2222/root/web-app.git
+   git clone https://63.34.9.231.nip.io/root/web-app
+   # or if you public key is added
+   git clone git@63.34.9.231.nip.io:2222/root/web-app.git
    ```
 2. Add SSH key to GitLab (Settings > SSH Keys).
 3. Push to `main` to trigger the pipeline.
@@ -438,3 +438,12 @@ The pipeline consists of three stages, each running in isolated Docker container
 *Image*: Web app (`images/web-app.png`).
 
 **Why**: Validates successful deployment.
+
+
+
+Evaluation at the end of phase 2
+
+Interview With Coding assessment: longer format
+
+Labs:
+Projects:
