@@ -1,4 +1,3 @@
-**
 
 # DevSecOps Environment Setup Guide
 
@@ -111,7 +110,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Scalability**: Easily modify or replicate the setup.
 - **Automation**: Reduces manual AWS Console usage.
 
-*Image*: Terraform output (`media/terraform_plan_output.png`).
+*Image*: T![erraform output] (media/terraform_plan_output.png).
 
 ### 3.2 Server Configuration
 **Purpose**: Set up essential services and security on the EC2 instance.
@@ -129,7 +128,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Nginx**: Secures and routes traffic.
 - **Security**: Protects against unauthorized access and attacks.
 
-*Image*: Docker containers (`media/docker_containers.png`).
+*Image*: ![Docker containers] (media/docker_containers.png).
 
 ### 3.3 SSL Configuration
 **Purpose**: Secure GitLab and the web app with HTTPS.
@@ -180,7 +179,7 @@ The pipeline consists of three stages, each running in isolated Docker container
 - **Collaboration**: Enables team contributions.
 - **SSH**: Secures pipeline authentication.
 
-*Image*: Project creation (`media/gitlab-project.png`).
+*Image*: ![Project creation] (`media/gitlab-project.png`).
 
 ### 3.5 GitLab Runner Setup
 **Purpose**: Enable CI/CD job execution with a Docker-based runner.
@@ -438,12 +437,3 @@ The pipeline consists of three stages, each running in isolated Docker container
 *Image*: Web app (`media/web-app.png`).
 
 **Why**: Validates successful deployment.
-
-
-
-Evaluation at the end of phase 2
-
-Interview With Coding assessment: longer format
-
-Labs:
-Projects:
